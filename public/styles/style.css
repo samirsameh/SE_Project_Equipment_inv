@@ -1,0 +1,425 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-image: url("../images/Ba3.webp");
+  background-size: cover; /* Ensures the image covers the entire viewport */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating the image */
+  background-attachment: fixed; /* Keeps the image static during scrolling */
+  
+}
+
+.centerImg {
+  display: block;
+  margin: 0 auto;
+}
+
+.center {
+text-align: center;
+}
+
+.navbar-shade {
+
+background-color: transparent;
+box-shadow: none;
+
+
+}
+.kanit-semibold {
+font-family: "Kanit", serif;
+font-weight: 600;
+font-style: normal;
+}
+.kanit-light {
+font-family: "Kanit", serif;
+font-weight: 300;
+font-style: normal;
+}
+.allign-middle{
+justify-content: center;
+
+
+
+}
+
+.center-button {
+position: absolute !important;
+
+ left: 50% !important; 
+ transform: translate(-50%, -50%) !important; 
+ cursor: pointer !important;
+
+}
+.center-button-n {
+  position: absolute !important;
+  top: 50% !important;
+   left: 50% !important; 
+   transform: translate(-50%, -50%) !important; 
+   cursor: pointer !important;
+  
+  }
+.left-button {
+position: absolute !important;
+
+ left: 40% !important; 
+ transform: translate(-50%, -50%) !important; 
+ cursor: pointer !important;
+
+}
+
+.right-button {
+position: absolute !important;
+
+ left: 60% !important; 
+ transform: translate(-50%, -50%) !important; 
+ cursor: pointer !important;
+
+}
+.left-button-n {
+  position: absolute !important;
+  top: 50% !important;
+   left: 40% !important; 
+   transform: translate(-50%, -50%) !important; 
+   cursor: pointer !important;
+  
+  }
+  
+  .right-button-n {
+  position: absolute !important;
+  top: 50% !important;
+   left: 60% !important; 
+   transform: translate(-50%, -50%) !important; 
+   cursor: pointer !important;
+  
+  }
+.text-box{
+border-radius: 20px; 
+outline: none ;
+padding-left: 10px; 
+padding-right: 10px; 
+width: 200px; 
+height: 30px; 
+border: none; 
+background-color:#efeded;
+
+}
+
+.text-box-p{
+  border-radius: 20px; 
+  outline: none ;
+  padding-left: 10px; 
+  padding-right: 10px; 
+  width: 200px; 
+  height: 30px; 
+  border: none; 
+  background-color:#efeded;
+  position: relative;
+  left : 40px;
+  
+  }
+
+.text-box-eq{
+border-radius: 20px; 
+outline: none ;
+padding-left: 10px; 
+padding-right: 10px; 
+width: 200px; 
+height: 30px; 
+border: none; 
+background-color:#efeded;
+
+}
+.table-container {
+  position: relative;
+  background: rgba(255, 255, 255, 0.6); /* Semi-transparent white */
+  backdrop-filter: blur(1px); /* Apply blur effect */
+  border-radius: 8px; /* Optional: add rounded corners */
+  padding: 20px; /* Optional: add padding */
+}
+
+.text-box ::placeholder{
+border-radius: 20px; 
+outline: none ;
+padding-left: 10px; 
+padding-right: 10px; 
+width: 200px; 
+height: 30px; 
+border: none; 
+background-color:#018ABE;
+color: #D6E8EE; 
+}
+.button{
+border-radius: 20px; 
+height: 30px; 
+left: 50px;
+position: relative;
+left: -30px;
+outline: none ;
+background-color: #ffcc00;
+
+}
+
+.f-button{
+  border-radius: 20px; 
+  height: 30px; 
+  left: 50px;
+
+  outline: none ;
+  background-color: #ffcc00;
+  
+  }
+.add-but{
+border-radius: 20px; 
+height: 30px; 
+left: 50px;
+
+outline: none ;
+background-color: #ffcc00;
+
+
+}
+
+.edit-but{
+border-radius: 20px; 
+height: 30px; 
+left: 50px;
+
+outline: none ;
+background-color: #ff3737;
+
+}
+
+.d-button{
+border-radius: 20px; 
+height: 30px; 
+left: 50px;
+
+outline: none ;
+background-color: rgb(255, 82, 82);
+color : white;
+}
+.btn-left{
+position: relative !important;
+left: -131px !important;
+
+}
+.txt-right{
+position: relative !important;
+left: 40px !important;
+}
+
+.text-mid{
+text-align: center; 
+
+}
+.navbar-col{
+background-color: #02457A !important;
+border: none;
+
+
+}
+.poppins-regular {
+font-family: "Poppins", serif;
+font-weight: 400;
+font-style: normal;
+}
+
+.poppins-light {
+font-family: "Poppins", serif;
+font-weight: 300;
+font-style: normal;
+}
+
+/* Ensure buttons are always below the table */
+.button-container {
+margin-top: 20px; /* Adjust spacing as needed */
+text-align: center; /* Center-align buttons */
+clear: both; /* Ensure no floats affect positioning */
+}
+
+.button-container button {
+margin: 5px; /* Add some spacing between buttons */
+}
+
+.table {
+width: 100%; /* Ensure table takes up the full width if needed */
+}
+
+form {
+margin-bottom: 20px; /* Add space between the form and the table */
+}
+/* Ensure the body and HTML take up the full height */
+html, body {
+margin: 0;
+padding: 0;
+height: 100%;
+}
+
+/* Main content area */
+.content {
+min-height: calc(100vh - 60px); /* Adjust for navbar height */
+padding: 20px;
+box-sizing: border-box;
+}
+
+/* Bottom Navbar */
+.bottom-navbar {
+position: fixed;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 60px; /* Navbar height */
+background-color: #333; /* Dark background */
+display: flex;
+justify-content: space-around; /* Space items evenly */
+align-items: center;
+box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Navbar Items */
+.bottom-navbar .nav-item {
+color: white;
+text-decoration: none;
+font-size: 16px;
+text-align: center;
+padding: 10px;
+transition: color 0.3s;
+}
+
+.bottom-navbar .nav-item:hover {
+color: #ffcc00; /* Highlight color */
+}
+
+/* Remove default border and padding */
+input[type="file"] {
+border: none;
+padding: 0;
+appearance: none; /* Remove default browser styling */
+-webkit-appearance: none;
+}
+
+/* Hide the default file input */
+input[type="file"]::file-selector-button {
+display: none;
+}
+
+/* Style the custom file input button */
+/*label {
+display: inline-block;
+padding: 10px 20px;
+background-color: #eee;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.2s ease;
+}*/
+
+/* Optional: Add hover effect */
+/*label:hover {
+background-color: #ddd;
+}*/
+/* Grid Container */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px; /* Adjusts spacing between columns */
+}
+
+/* Grid Item */
+.grid-item {
+  padding: 10px; /* Space around each card */
+}
+
+/* Card Image */
+.card-img-top {
+  max-width: 100%; /* Ensures the image does not exceed the width of the card */
+  height: auto;    /* Maintains aspect ratio */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+/* Responsive Image */
+.img-responsive {
+  width: 100%; /* Makes the image responsive */
+  height: auto; /* Maintains aspect ratio */
+}
+
+/* Card Body */
+.card-body {
+  text-align: left; /* Aligns text to the left */
+}
+
+/* Button Styles */
+.add-to-cart-btn {
+  margin-top: 10px; /* Adds space above the button */
+}
+
+/* Optional: Add hover effect for cards */
+.card {
+  transition: transform 0.2s; /* Smooth transition for hover effect */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slightly enlarges the card on hover */
+}
+
+/* Card Container */
+.card {
+  backdrop-filter: blur(5px); /* White background for the card */
+  border-radius: 15px; /* Curved corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for depth */
+  overflow: hidden; /* Ensures that the content does not overflow the rounded corners */
+}
+
+/* Card Image */
+.card-img-top {
+  max-width: 100%; /* Ensures the image does not exceed the width of the card */
+  height: auto;    /* Maintains aspect ratio */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+/* Card Body */
+.card-body {
+  padding: 15px; /* Adds padding inside the card body */
+  text-align: left; /* Aligns text to the left */
+}
+
+/* Optional: Add hover effect for cards */
+.card {
+  transition: transform 0.2s; /* Smooth transition for hover effect */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slightly enlarges the card on hover */
+}
+.page-container {
+  margin: 0 auto; /* Centers the content */
+  max-width: 1200px; /* Adjust the max width as needed */
+  padding-left: 20px; /* Optional padding */
+  padding-right: 20px; /* Optional padding */
+}
+.img-minimized {
+  max-width: 400px; /* Adjust width as needed */
+  max-height: 400px; /* Adjust height as needed */
+  object-fit: cover; /* Ensures the image scales proportionally and fits within the dimensions */
+  border-radius: 8px; /* Optional: rounds the corners of the image */
+}
+
+.box-but-a{
+  border-radius: 20px; 
+  height: 30px; 
+  left: 50px;
+top: 70px;
+  outline: none ;
+  background-color: #ffcc00;
+  
+  }
+  .box-but{
+    border-radius: 20px; 
+    height: 30px; 
+    left: 50px;
+
+
+    outline: none ;
+    background-color: #ffcc00;
+    
+    }

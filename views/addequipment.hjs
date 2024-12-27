@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add Equipment</title>
+     <!-- Load only one version of jQuery -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      
+      <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+      <!-- Custom CSS -->
+      <link rel='stylesheet' href='/styles/style.css' />
+      
+      <!-- Bootstrap JS -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+      
+      <!-- Load only one version of jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- Your custom script - Make sure this loads AFTER jQuery -->
+<script src="/src/addequipments.js"></script>
+  </head>
+<body>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+   <nav class="navbar navbar-inverse bg-light ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand kanit-semibold" href="#">Equipment Inventory</a>
+    </div>
+    <div class="collapse navbar-collapse kanit-light" id="myNavbar">
+      <ul class="nav navbar-nav allign-middle" style="text-align: center; color:#D6E8EE;">
+        <li ><a href="/search">Home</a></li>
+        <li class="active"><a href="/equipments">Equipments</a></li>
+        
+        <li  ><a href="/users" id="admin-item" >Users</a></li>
+        <li><a href="/cart">Cart</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="/"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <h1 class="center kanit-semibold">
+        Add Equipment 
+    </h1>
+    <form class="form-horizontal" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="equipment_name" class="col-sm-2 control-label kanit-light">Equipment Name</label>
+            <div class="col-sm-10">
+                <input class="text-box" type="text" id="equipment_name" name="equipment_name" placeholder="......" value="" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="rating" class="col-sm-2 control-label kanit-light">Rating</label>
+            <div class="col-sm-10">
+                <input class="text-box" type="text" id="rating" name="rating" placeholder="......" value="" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="model_number" class="col-sm-2 control-label kanit-light">Model Number</label>
+            <div class="col-sm-10">
+                <input class="text-box" type="text" id="model_number" name="model_number" placeholder="......" value="" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="quantity" class="col-sm-2 control-label kanit-light">Quantity</label>
+            <div class="col-sm-10">
+                <input class="text-box" type="number" id="quantity" name="quantity" placeholder="......" value="" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="status" class="col-sm-2 control-label kanit-light">Status</label>
+            <div class="col-sm-10">
+                <input class="text-box" type="text" id="status" name="status" placeholder="......" value="" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="location" class="col-sm-2 control-label kanit-light">Location</label>
+            <div class="col-sm-10">
+                <input class="text-box" type="text" id="location" name="location" placeholder="......" value="" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="category_id" class="col-sm-2 control-label kanit-light">Category ID</label>
+            <div class="col-sm-10">
+                <input class="text-box" type="text" id="category_id" name="category_id" placeholder="......" value="" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="supplier_id" class="col-sm-2 control-label kanit-light">Supplier ID</label>
+            <div class="col-sm-10">
+                <input class="text-box" type="text" id="supplier_id" name="supplier_id" placeholder="......" value="" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="equipment_img" class="col-sm-2 control-label kanit-light">Upload Image</label>
+            <label for="file-input">
+            <span>Choose File</span>
+            <input type="file" id="file-input" name="equipment_img">
+        </label>
+    </div>
+        </div>
+        <div>
+            <input id="addequipment" name="submit" type="button" value="Add" class="btn btn-light border edit-but center-button">
+        </div>
+    </form>
+</body>
+</html>

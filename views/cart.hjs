@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+      <title>Cart</title>
+     <!-- Load only one version of jQuery -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      
+      <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+      <!-- Custom CSS -->
+      <link rel='stylesheet' href='/styles/style.css' />
+      
+      <!-- Bootstrap JS -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+      
+      <!-- Load only one version of jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- Your custom script - Make sure this loads AFTER jQuery -->
+<script src="/src/cart.js"></script>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+   <nav class="navbar navbar-inverse bg-light ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand kanit-semibold" href="#">Equipment Inventory</a>
+    </div>
+    <div class="collapse navbar-collapse kanit-light" id="myNavbar">
+      <ul class="nav navbar-nav allign-middle" style="text-align: center; color:#D6E8EE;">
+        <li ><a href="/search">Home</a></li>
+        <li><a href="/equipments">Equipments</a></li>
+       <li id="users-menu-item" style="display: none;"><a href="/users">Users</a></li>
+        <li class="active" ><a href="/cart">Cart</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="/"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="container">
+      <table class="table table-striped table-container" class ="poppins-regular">
+        <thead>
+          <tr>
+            <th class="text-center">Equipment Name</th>
+            <th class="text-center">Model Number</th>
+            <th class="text-center">Quantity</th>
+            <th class="text-center">Delete</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+  {{#emp}}
+    <tr class ="poppins-light">
+        <td style="display: none;" class="cart-id">{{cart_id}}</td>
+ <td class="text-center">{{equipment_name}}</td>
+      <td class="text-center">{{model_number}}</td>
+
+      <td class="text-center">
+        <div class=" col-sm-10">
+          <input
+            type="number"
+            id="{{equipment_id}}"
+            name="quantity"
+            value="{{quantity}}"
+            required
+            class=" text-mid txt-right text-box"
+          >
+        </div>
+      </td>
+      <td class="text-center">
+         <td class="text-center">
+       <button class="btn btn-danger btn-left d-button remove-from-cart" data-cart-id="{{cart_id}}">Delete</button>
+   </td>
+      </td>
+    </tr>
+  {{/emp}}
+</tbody>
+
+      
+      </table>
+        </br>
+          </br>
+            <div class="center"  id = "div-btn">
+            <input id="update" name="updateBtn" type="button" value="Update" class="btn btn-light border button left-button">
+            <input id="makeOrder" name="makeOrderBtn" type="button" value="Make Order" class="btn btn-light border button right-button">
+     </div>
+          
+    </div>
+</br>
+</br>
+</br>
+</br>
+</br>
+ <script>
+        // Get the user role from a global variable set by the server
+        const userRole = '{{user.role}}'; // This will be populated by the server
+        
+        // Show the Users menu item only for admins
+        if (userRole === 'admin') {
+            document.getElementById('users-menu-item').style.display = 'block';
+        }
+    </script>
+  </body>
+</html>
